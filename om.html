@@ -4,30 +4,51 @@
    <title>form project</title>
 </head>
 <style>
-   body{
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-   }
+body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+     input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+   
  </style>
 <body>
    <h2><b>Profile Form</b></h2>
+   <form>
    <div>
       <label for="om">Name</label>
       <br>
        <input type="text" id="om" placeholder="First Name">
        <label for="oml"></lebel>
-       <input type="text" id="oml" placeholder="Second Name">
+       <input type="text" id="oml" placeholder="Last Name">
    </div>
    <br>
    <div>
       <label for="omn">Phone Number</label>
-      <input type="text" id="omn" placeholder="Phone Number">
+      <input type="tel" id="omn" placeholder="+91 9876543210" pattern="^\+?[0-9]{10,15}$" required >
       <label for="omf">Fax Number</label>
-      <input type="text" id="omf" placeholder="Fax Number">
+      <input type="text" id="omf" placeholder="Fax Number" required>
    </div>
    <br>
    <div>
       <label for="ome">Email</label>
-      <input type="email" id="ome" placeholder="Email">
+      <input type="email" id="ome" placeholder="xyz@gmail.com "required>
    </div>
    <br>
    <div>
@@ -52,12 +73,13 @@
    </div>
    <br>
    <div>
-      <label for="omb">Note(For Additional Information)</label><br>
-      <input type="text" id="omb" placeholder="Type....">
+      <label for="Note">Note</label><br>
+      <textarea name="" id="Note" cols="20" rows="10" placeholder="Enter Comment..."></textarea>
    </div>
    <br>
    <div>
-      <input type="submit" value="Send">
+      <input type="button" value="Send">
    </div>
+   </form>
 </body>
 </html>
