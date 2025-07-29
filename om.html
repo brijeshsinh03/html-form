@@ -4,30 +4,46 @@
    <title>form project</title>
 </head>
 <style>
-body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      max-width: 700px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    label {
-      display: block;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-     input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-   
- </style>
+   body{
+      text-align: center;
+      display: grid;
+      border: 5px solid black;
+      padding: 15px 100px 50px;
+      margin-top: 25px;
+      margin-left: 500px;
+      margin-right: 500px;
+      margin-bottom: 25px;
+      
+   }
+   form{
+      text-align: left;
+      font-size: larger;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 400;
+   }
+   h2{
+      text-decoration: solid underline black;
+       text-transform: capitalize;
+       text-shadow: 2px 2px 2px red;
+       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   }
+   input{
+      font-size: larger;
+   }
+   .button{
+      color: black;
+      background-color: rgb(103, 103, 204);
+      width: 15%;
+      border-radius: 30px;
+      height: 45px;
+      
+   }
+   select{
+      height: 30px;
+      width: 200px;
+   }
+
+   </style>
 <body>
    <h2><b>Profile Form</b></h2>
    <form>
@@ -41,18 +57,18 @@ body {
    <br>
    <div>
       <label for="omn">Phone Number</label>
-      <input type="tel" id="omn" placeholder="+91 9876543210" pattern="^\+?[0-9]{10,15}$" required >
+      <input type="tel" id="omn" placeholder="+91 9876543210" pattern="^\+?[0-9]{10,15}$" required ><br><br>
       <label for="omf">Fax Number</label>
       <input type="text" id="omf" placeholder="Fax Number" required>
    </div>
    <br>
    <div>
-      <label for="ome">Email</label>
+      <label for="ome">Email</label><br>
       <input type="email" id="ome" placeholder="xyz@gmail.com "required>
    </div>
    <br>
    <div>
-      <label for="omc">Company</label>
+      <label for="omc">Company</label><br>
        <input type="text" id="omc" placeholder="Company">
    </div>
    <br>
@@ -74,12 +90,13 @@ body {
    <br>
    <div>
       <label for="Note">Note</label><br>
-      <textarea name="" id="Note" cols="20" rows="10" placeholder="Enter Comment..."></textarea>
+      <textarea name="" id="Note" cols="35" rows="5" placeholder="Enter Comment..."></textarea>
    </div>
    <br>
-   <div>
-      <input type="button" value="Send">
-   </div>
    </form>
+   <div>
+      <input class="button" type="button" value="Send">
+   </div>
+  
 </body>
 </html>
