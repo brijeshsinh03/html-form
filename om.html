@@ -3,6 +3,24 @@
 <head>
    <title>form project</title>
 </head>
+<script>
+        function validateform()
+{ 
+        var a=document.getElementById("om").value;
+        var b=document.getElementById("oml").value;
+        var c=document.getElementById("omn").value;
+        var d=document.getElementById("omf").value;
+        var e=document.getElementById("ome").value;
+        var f=document.getElementById("omc").value;
+
+        if(a==""||b==""||c==""||d==""||e==""||f=="");
+      {
+       alert("All fields are mendetory");
+       return false;
+      }
+      return true;
+}
+</script>
 <style>
    body{
       text-align: center;
@@ -31,36 +49,34 @@
    input{
       font-size: larger;
    }
-   .button{
+   .submit{
       color: black;
       background-color: royalblue;
       width: 15%;
       border-radius: 30px;
-      height: 45px;
-      
-      
+      height: 45px;   
    }
    select{
       height: 30px;
       width: 200px;
    }
-   :visited.button{
+   :visited.submit{
       color: green;
    }
-   :hover.button{
+   :hover.submit{
       color: orange;
    }
 
    </style>
 <body>
    <h2><b>Profile Form</b></h2>
-   <form>
+   <form  onsubmit="return validateform()">
    <div>
       <label for="om">Name</label>
       <br>
-       <input type="text" id="om" placeholder="First Name">
+       <input type="text" id="om" placeholder="First Name" required>
        <label for="oml"></lebel>
-       <input type="text" id="oml" placeholder="Last Name">
+       <input type="text" id="oml" placeholder="Last Name" required>
    </div>
    <br>
    <div>
@@ -77,7 +93,7 @@
    <br>
    <div>
       <label for="omc">Company</label><br>
-       <input type="text" id="omc" placeholder="Company">
+       <input type="text" id="omc" placeholder="Company" required>
    </div>
    <br>
    <div>
@@ -103,7 +119,7 @@
    <br>
    </form>
    <div>
-      <input class="button" type="button" value="Send">
+      <input class="submit"  type="submit" value="submit">
    </div>
   
 </body>
