@@ -3,6 +3,7 @@
 <head>
    <title>form project</title>
 </head>
+<body>
 <script>
         function validateform()
 { 
@@ -13,10 +14,9 @@
         var e=document.getElementById("ome").value;
         var f=document.getElementById("omc").value;
 
-        if(a==""||b==""||c==""||d==""||e==""||f=="");
-      {
-       alert("All fields are mendetory");
-       return false;
+        if(a=="" || b=="" || c=="" || d=="" || e=="" || f=="" );{
+          alert("All fields are mendetory");
+          return false;
       }
       return true;
 }
@@ -55,10 +55,12 @@
       width: 15%;
       border-radius: 30px;
       height: 45px;   
+      display: block;
+      margin: 0 auto;
    }
    select{
-      height: 30px;
-      width: 200px;
+      height: 33px;
+      width: 305px;
    }
    :visited.submit{
       color: green;
@@ -66,34 +68,33 @@
    :hover.submit{
       color: orange;
    }
-
    </style>
-<body>
+
    <h2><b>Profile Form</b></h2>
    <form  onsubmit="return validateform()">
    <div>
-      <label for="om">Name</label>
+      <label for="Fname">Name</label>
       <br>
-       <input type="text" id="om" placeholder="First_Name" required>
-       <label for="oml"></lebel>
-       <input type="text" id="oml" placeholder="Last_Name" required>
+       <input type="text" id="Fname" placeholder="First_Name">
+       <label for="Lname"></lebel>
+       <input type="text" id="Lname" placeholder="Last_Name">
    </div>
    <br>
    <div>
-      <label for="omn">Phone Number</label>
-      <input type="tel" id="omn" placeholder="+91 9876543210" pattern="^\+?[0-9]{10,15}$" required ><br><br>
-      <label for="omf">Fax Number</label>
-      <input type="text" id="omf" placeholder="Fax Number" required>
+      <label for="Pnumber">Phone Number</label>
+      <input type="tel" id="Pnumber" placeholder="+91 9876543210" pattern="^\+?[0-9]{10,15}$" required ><br><br>
+      <label for="Fnumber">Fax Number</label>
+      <input type="text" id="Fnumber" placeholder="Fax Number">
    </div>
    <br>
    <div>
-      <label for="ome">Email_Id</label><br>
-      <input type="email" id="ome" placeholder="xyz@gmail.com "required>
+      <label for="Email1">Email_Id</label><br>
+      <input type="email" id="Email1" placeholder="xyz@gmail.com "required>
    </div>
    <br>
    <div>
-      <label for="omc">Company</label><br>
-       <input type="text" id="omc" placeholder="Company" required>
+      <label for="Company1">Company</label><br>
+       <input type="text" id="Company1" placeholder="Company">
    </div>
    <br>
    <div>
@@ -113,14 +114,13 @@
    </div>
    <br>
    <div>
-      <label for="Note">Note</label><br>
+      <label for="Note">Note(Optional)</label><br>
       <textarea name="" id="Note" cols="35" rows="5" placeholder="Enter Comment..."></textarea>
    </div>
    <br>
-   </form>
    <div>
       <input class="submit"  type="submit" value="submit">
    </div>
-  
+   </form>
 </body>
 </html>
