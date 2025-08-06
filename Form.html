@@ -23,14 +23,16 @@ function toggleAadhaar() {
 
         function validateform()
 { 
-        var a=document.getElementById("om").value;
-        var b=document.getElementById("oml").value;
-        var c=document.getElementById("omn").value;
-        var d=document.getElementById("omf").value;
-        var e=document.getElementById("ome").value;
-        var f=document.getElementById("omc").value;
+        var Fname=document.getElementById("Fname").value;
+        var Lname=document.getElementById("Lname").value;
+        var Pnumber=document.getElementById("Pnumber").value;
+        var Fnumber=document.getElementById("Fnumber").value;
+        var Email1=document.getElementById("Email1").value;
+        var Company1=document.getElementById("Company1").value;
+        var aadhaarCheck=document.getElementById("aadhaarCheck").value;
+        var aadhaarSection=document.getElementById("aadhaarSection").value;
 
-        if(a=="" || b=="" || c=="" || d=="" || e=="" || f=="" );{
+        if(Fname=="" || Lname=="" || Pnumber=="" || Fnumber=="" || Email1=="" || Company1=="" || aadhaarCheck=="" || aadhaarSection=="" );{
           alert("All fields are mendetory");
           return false;
       }
@@ -102,25 +104,25 @@ function toggleAadhaar() {
    <br>
    <div>
       <label for="Pnumber">Phone Number</label>
-      <input type="tel" id="Pnumber" placeholder="+91 9876543210" pattern="^\+?[0-9]{10,15}$" required ><br><br>
+      <input type="tel" id="Pnumber" placeholder="+91 9876543210" pattern="^\+?[0-9]{10,15}$"><br><br>
       <label for="Fnumber">Fax Number</label>
       <input type="text" id="Fnumber" placeholder="Fax Number">
    </div>
    <br>
    <div>
       <label for="Email1">Email_Id</label><br>
-      <input type="email" id="Email1" placeholder="xyz@gmail.com "required>
+      <input type="email" id="Email1" placeholder="xyz@gmail.com ">
    </div>
    <br>
    <div>
       <label>
-         <input type="checkbox" id="aadhaarCheck" onclick="toggleAadhaar()" required"> Aadhaar Available
+         <input type="checkbox" id="aadhaarCheck" onclick="toggleAadhaar()"> Aadhaar Available
       </label><br>
    </div>
    <br>
  <div id="aadhaarSection">
          <label for="aadhaar">Aadhaar Number</label><br>
-         <input type="text" id="aadhaar" name="aadhaar" maxlength="14" pattern="\d{4}\s\d{4}\s\d{4}" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+         <input type="text" id="aadhaar" name="aadhaar" maxlength="12">
  </div>
    <br>
    <div>
